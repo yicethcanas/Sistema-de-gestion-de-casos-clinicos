@@ -1,0 +1,11 @@
+C:\Users\YICETH MONTOYA\Downloads\hexagonal\src\main\java\com\universidad\hexagonal\adapters\in\rest\ClinicalExamController.java
+C:\Users\YICETH MONTOYA\Downloads\hexagonal\src\main\java\com\universidad\hexagonal\adapters\in\rest\ClinicalExamResponse.java
+C:\Users\YICETH MONTOYA\Downloads\hexagonal\src\main\java\com\universidad\hexagonal\adapters\out\persistence\InMemoryClinicalExamRepository.java
+C:\Users\YICETH MONTOYA\Downloads\hexagonal\src\main\java\com\universidad\hexagonal\HexagonalJavaHelloApplication.java
+C:\Users\YICETH MONTOYA\Downloads\hexagonal\src\main\java\com\universidad\hexagonal\application\ports\out\ClinicalExamRepository.java
+C:\Users\YICETH MONTOYA\Downloads\hexagonal\src\main\java\com\universidad\hexagonal\domain\model\ClinicalExam.java
+C:\Users\YICETH MONTOYA\Downloads\hexagonal\src\main\java\com\universidad\hexagonal\application\ports\in\RegisterClinicalExamUseCase.java
+C:\Users\YICETH MONTOYA\Downloads\hexagonal\src\main\java\com\universidad\hexagonal\adapters\in\rest\ClinicalExamRequest.java
+C:\Users\YICETH MONTOYA\Downloads\hexagonal\src\main\java\com\universidad\hexagonal\application\usecase\RegisterClinicalExamUseCaseImpl.java
+C:\Users\YICETH MONTOYA\Downloads\hexagonal\src\main\java\com\universidad\hexagonal\config\ClinicalExamConfig.java
+C:\Users\YICETH MONTOYA\Downloads\hexagonal\src\main\java\com\universidad\hexagonal\domain\model\ClinicalAlert.java

@@ -1,0 +1,11 @@
+com\universidad\hexagonal\application\ports\in\RegisterClinicalExamUseCase.class
+com\universidad\hexagonal\HexagonalJavaHelloApplication.class
+com\universidad\hexagonal\application\usecase\RegisterClinicalExamUseCaseImpl.class
+com\universidad\hexagonal\adapters\in\rest\ClinicalExamRequest.class
+com\universidad\hexagonal\adapters\in\rest\ClinicalExamController.class
+com\universidad\hexagonal\adapters\out\persistence\InMemoryClinicalExamRepository.class
+com\universidad\hexagonal\application\ports\out\ClinicalExamRepository.class
+com\universidad\hexagonal\config\ClinicalExamConfig.class
+com\universidad\hexagonal\domain\model\ClinicalExam.class
+com\universidad\hexagonal\domain\model\ClinicalAlert.class
+com\universidad\hexagonal\adapters\in\rest\ClinicalExamResponse.class
