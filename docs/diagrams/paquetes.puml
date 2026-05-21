@@ -1,0 +1,19 @@
+@startuml
+title Diagrama de Paquetes - Arquitectura Hexagonal
+
+package "domain.model" as Domain
+package "application.ports.in" as PortsIn
+package "application.ports.out" as PortsOut
+package "application.usecase" as UseCase
+package "adapters.in.rest" as Rest
+package "adapters.out.persistence" as Persistence
+package "config" as Config
+
+Rest --> PortsIn
+UseCase --> Domain
+UseCase --> PortsOut
+Persistence ..|> PortsOut
+Config --> UseCase
+Config --> Persistence
+
+@enduml

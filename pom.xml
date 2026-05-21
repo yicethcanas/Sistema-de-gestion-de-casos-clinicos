@@ -11,7 +11,9 @@
   </parent>
 
   <groupId>com.universidad</groupId>
-  <artifactId>hexagonal-java-hello</artifactId>
+  <artifactId>sistema-gestion-casos-clinicos</artifactId>
+  <name>Sistema de Gestion de Casos Clinicos</name>
+  <description>Mini implementacion REST para registro y alerta de resultados clinicos</description>
   <version>1.0.0</version>
 
   <properties>
@@ -26,7 +28,7 @@
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter</artifactId>
-      <version>5.10.0</version> <!-- O la versión más actual -->
+      <version>5.10.0</version>
       <scope>test</scope>
     </dependency>
   </dependencies>

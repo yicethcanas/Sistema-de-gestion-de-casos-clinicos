@@ -1,0 +1,19 @@
+@startuml
+title Diagrama de Despliegue - Mini Implementacion
+
+node "Equipo cliente" as Client {
+  artifact "Postman / curl / navegador" as Tool
+}
+
+node "Servidor de aplicacion" as Server {
+  node "Contenedor Docker" as Container {
+    artifact "Spring Boot App\nJava 17" as App
+  }
+}
+
+database "Memoria del proceso" as Memory
+
+Tool --> App : HTTP 8080\nPOST /clinical-exams
+App --> Memory : guarda resultados temporalmente
+
+@enduml

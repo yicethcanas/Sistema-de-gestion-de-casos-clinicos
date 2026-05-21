@@ -1,0 +1,20 @@
+@startuml
+title Diagrama de Secuencia - Registro de Examen Clinico
+
+actor "Personal clinico" as User
+participant "ClinicalExamController" as Controller
+participant "RegisterClinicalExamUseCase" as UseCase
+participant "ClinicalExam" as Exam
+participant "ClinicalExamRepository" as Repository
+
+User -> Controller : POST /clinical-exams
+Controller -> UseCase : registerExam(exam)
+UseCase -> UseCase : validar datos obligatorios
+UseCase -> Exam : isOutOfRange()
+Exam --> UseCase : true/false
+UseCase -> Repository : save(exam)
+Repository --> UseCase : guardado
+UseCase --> Controller : ClinicalAlert
+Controller --> User : 201 Created + respuesta JSON
+
+@enduml

@@ -5,10 +5,13 @@ import com.universidad.hexagonal.domain.model.ClinicalAlert;
 import com.universidad.hexagonal.domain.model.ClinicalExam;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api/clinical-exams")
+@RequestMapping("/clinical-exams")
 public class ClinicalExamController {
 
     private final RegisterClinicalExamUseCase registerClinicalExamUseCase;
@@ -20,6 +23,8 @@ public class ClinicalExamController {
     @PostMapping
     public ResponseEntity<?> registerExam(@RequestBody ClinicalExamRequest request) {
         try {
+            validateRequiredNumericFields(request);
+
             ClinicalExam clinicalExam = new ClinicalExam(
                     request.getPatientId(),
                     request.getPatientName(),
@@ -44,6 +49,20 @@ public class ClinicalExamController {
 
         } catch (IllegalArgumentException e) {
             return ResponseEntity.badRequest().body(e.getMessage());
+        }
+    }
+
+    private void validateRequiredNumericFields(ClinicalExamRequest request) {
+        if (request.getExamValue() == null) {
+            throw new IllegalArgumentException("El examValue es obligatorio");
+        }
+
+        if (request.getMinNormalValue() == null) {
+            throw new IllegalArgumentException("El minNormalValue es obligatorio");
+        }
+
+        if (request.getMaxNormalValue() == null) {
+            throw new IllegalArgumentException("El maxNormalValue es obligatorio");
         }
     }
 }

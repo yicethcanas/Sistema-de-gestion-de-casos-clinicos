@@ -5,9 +5,9 @@ public class ClinicalExamRequest {
     private String patientId;
     private String patientName;
     private String examType;
-    private double examValue;
-    private double minNormalValue;
-    private double maxNormalValue;
+    private Double examValue;
+    private Double minNormalValue;
+    private Double maxNormalValue;
 
     public ClinicalExamRequest() {
     }
@@ -36,27 +36,27 @@ public class ClinicalExamRequest {
         this.examType = examType;
     }
 
-    public double getExamValue() {
+    public Double getExamValue() {
         return examValue;
     }
 
-    public void setExamValue(double examValue) {
+    public void setExamValue(Double examValue) {
         this.examValue = examValue;
     }
 
-    public double getMinNormalValue() {
+    public Double getMinNormalValue() {
         return minNormalValue;
     }
 
-    public void setMinNormalValue(double minNormalValue) {
+    public void setMinNormalValue(Double minNormalValue) {
         this.minNormalValue = minNormalValue;
     }
 
-    public double getMaxNormalValue() {
+    public Double getMaxNormalValue() {
         return maxNormalValue;
     }
 
-    public void setMaxNormalValue(double maxNormalValue) {
+    public void setMaxNormalValue(Double maxNormalValue) {
         this.maxNormalValue = maxNormalValue;
     }
 }

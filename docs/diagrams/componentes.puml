@@ -1,0 +1,20 @@
+@startuml
+title Diagrama de Componentes - Sistema de Gestion de Casos Clinicos
+
+actor "Personal clinico" as User
+
+component "API REST\nClinicalExamController" as Api
+component "Caso de uso\nRegisterClinicalExamUseCase" as UseCase
+component "Dominio\nClinicalExam / ClinicalAlert" as Domain
+interface "ClinicalExamRepository" as RepoPort
+component "Repositorio en memoria\nInMemoryClinicalExamRepository" as Repo
+database "Almacenamiento temporal" as Storage
+
+User --> Api : POST /clinical-exams
+Api --> UseCase : registerExam(exam)
+UseCase --> Domain : valida rango
+UseCase --> RepoPort : save(exam)
+RepoPort <|.. Repo
+Repo --> Storage
+
+@enduml

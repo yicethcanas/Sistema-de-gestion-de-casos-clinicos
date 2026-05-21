@@ -1,0 +1,31 @@
+@startuml
+title Vista Archimate Simplificada - Casos Clinicos
+
+rectangle "Capa de negocio" {
+  actor "Medico / personal clinico" as BusinessActor
+  rectangle "Proceso: registrar examen" as BusinessProcess
+  rectangle "Servicio: evaluacion de resultado clinico" as BusinessService
+}
+
+rectangle "Capa de aplicacion" {
+  component "API REST" as AppApi
+  component "Servicio de registro" as AppService
+  component "Modulo de alertas" as AlertModule
+}
+
+rectangle "Capa tecnologica" {
+  node "Aplicacion Java 17" as JavaApp
+  node "Docker" as Docker
+  database "Almacenamiento en memoria" as Memory
+}
+
+BusinessActor --> BusinessProcess
+BusinessProcess --> BusinessService
+BusinessService --> AppApi
+AppApi --> AppService
+AppService --> AlertModule
+AppService --> JavaApp
+JavaApp --> Memory
+Docker --> JavaApp
+
+@enduml

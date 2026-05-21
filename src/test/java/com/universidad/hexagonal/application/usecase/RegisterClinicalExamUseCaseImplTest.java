@@ -68,4 +68,23 @@ public class RegisterClinicalExamUseCaseImplTest {
 
         Assertions.assertEquals("El patientId es obligatorio", exception.getMessage());
     }
+
+    @Test
+    void shouldThrowExceptionWhenNormalRangeIsInvalid() {
+        ClinicalExam exam = new ClinicalExam(
+                "P003",
+                "Ana Lopez",
+                "Colesterol",
+                180,
+                200,
+                120
+        );
+
+        IllegalArgumentException exception = Assertions.assertThrows(
+                IllegalArgumentException.class,
+                () -> useCase.registerExam(exam)
+        );
+
+        Assertions.assertEquals("El rango normal es inválido", exception.getMessage());
+    }
 }
