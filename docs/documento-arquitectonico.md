@@ -65,7 +65,7 @@ Seguridad:
 
 ## 4. Estilo arquitectonico seleccionado
 
-Se usa Clean Architecture aplicada con estilo hexagonal. La solucion separa el dominio, la aplicacion y los adaptadores de infraestructura para que la regla clinica principal no dependa de Spring Boot ni del mecanismo de almacenamiento.
+Se usa Clean Architecture aplicada con estilo hexagonal. La solucion separa los casos de uso de la aplicacion y los adaptadores de infraestructura para que la regla clinica principal no dependa del dominio y todos los componentes se mantengan desacoplados entre sí.
 
 Esta decision es adecuada porque el alcance es pequeno y academico, pero permite demostrar separacion de responsabilidades, puertos, adaptadores, reglas de negocio y pruebas unitarias. Microservicios, SOA o Event-Driven agregarian complejidad innecesaria para este flujo.
 
